@@ -1,0 +1,105 @@
+{
+  "useSingleChainForAllWorkers": true,
+  "websocketPollingMs": 1,
+  "loopDelayMs": 10,
+  "eip1559": true,
+  "workers": 1,
+  "network": {
+    "providers": ["ws://127.0.0.1:8545"],
+    "chainTokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "currency": "WETH",
+    "token": "ETH"
+  },
+  "botContractAddress": "0x7B3Be2dDDdDf9A0a3fE1DC57B98980F662C3a422",
+  "dexRouterAddress": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+  "mev": {
+    "enabled": true,
+    "simulate": true,
+    "bribeAmount": 0.001,
+    "endpoints": []
+  },
+  "buy": {
+    "purchaseTokenAddress": "0xEb63D671653489B91E653c52a018B63D5095223B",
+    "liquidityTokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "devWalletAddress": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "rounds": 2,
+    "snipers": 1,
+    "preApprove": true,
+    "preSign": true,
+    "method": 2,
+    "tokenAmount": 500,
+    "chainTokenSpendLimit": 0.1,
+    "useTxid": false,
+    "approveTo": "contract",
+    "includeCaller": true,
+    "useBuybotChecks": false,
+    "checkSellability": true,
+    "maxBuyTax": 21,
+    "maxSellTax": 33,
+    "percentOfTotalSupply": 0.1,
+    "idSalt": "asd"
+  },
+  "gas": {
+    "gasLimit": 500000,
+    "maxFeePerGas": 300,
+    "maxPriorityFeePerGas": 84
+  },
+  "approveGas": {
+    "gasLimit": 200000,
+    "maxFeePerGas": 80,
+    "maxPriorityFeePerGas": 3
+  },
+  "stopAfterFirstFail": false,
+  "sell": {
+    "sellPercentage": 100,
+    "gasMultiplier": 1.5
+  },
+  "devAction": {
+    "action": "buy",
+    "devActionIds": [],
+    "devActionIgnoredIds": [],
+    "minimumLiquidity": 0.5
+  },
+  "check": {
+    "highGasTx": {
+      "enabled": false,
+      "sendWithFirstWorkerOnly": true
+    },
+    "antiRugPull": {
+      "enabled": true,
+      "minPurchaseTokenPullPercentage": 30
+    },
+    "antiBlacklist": {
+      "enabled": true
+    },
+    "antiToxic": {
+      "enabled": true,
+      "toxicIds": [],
+      "nonToxicIds": []
+    },
+    "balanceCheckMultiplier": {
+      "enabled": true,
+      "balanceMultiplier": 9,
+      "priorityAndFeeModifierInGwei": 1
+    },
+    "sellOnPercentageGain": {
+      "enabled": true,
+      "gainPercentage": 700
+    },
+    "skemGwei": {
+      "enabled": true,
+      "limit": 180
+    },
+    "purchaseTokenEnabled": false,
+    "pregen": {
+      "maxPriorityFeePerGas": {
+        "from": 1,
+        "to": 20,
+        "step": 0.5
+      }
+    }
+  },
+  "wTokenAmountForBuybotTaxChecks": 0.00001,
+  "blocksDelayBeforeFirstBuy": 3,
+  "waitBeforeFirstBuyMS": 0
+}

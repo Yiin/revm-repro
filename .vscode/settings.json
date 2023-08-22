@@ -1,0 +1,11 @@
+{
+  "cody.codebase": "https://github.com/Yiin/blazing-bot-v2",
+  "solidity.packageDefaultDependenciesContractsDirectory": "src",
+  "solidity.packageDefaultDependenciesDirectory": "lib",
+  "solidity.compileUsingRemoteVersion": "v0.8.17+commit.8df45f5f",
+  "[solidity]": {
+    "editor.defaultFormatter": "JuanBlanco.solidity" 
+  },
+  "solidity.formatter": "forge",
+  "solidity.defaultCompiler": "localNodeModule"
+}
