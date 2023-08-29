@@ -6,6 +6,9 @@
 3. revm doesn't report any issue.
 Why? Is there a way to fix that?
 
+## Notes
+Most if not all of related logic is it simulate_send.rs, there are no hidden gotchas anywhere.
+
 ## To start foundry fork:
 cd foundry && npm start
 
